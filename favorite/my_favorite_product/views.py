@@ -22,8 +22,6 @@ class FavoriteAdd(APIView):
         response = requests.get(produto_url)
         if response.status_code == 200:
             produto_data = response.json()
-            # Extraia os dados necessários do produto_data
-            # ...
 
             # Salve os dados na tabela de favoritos
             favorite = Favorite(client_id=client_id, produto_id=produto_id)
